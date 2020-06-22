@@ -11,6 +11,10 @@
   <modules>
     <module>code/routines</module>
     <module>jobs/process/sale_order_service_0.1</module>
+    <module>jobs/process/demo/onboardingdemojob_0.1</module>
+    <module>jobs/process/pex_0.1</module>
+    <module>jobs/process/pex_2_0.1</module>
+    <module>jobs/process/testtrest_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TMC_GIT</talend.project.name>
