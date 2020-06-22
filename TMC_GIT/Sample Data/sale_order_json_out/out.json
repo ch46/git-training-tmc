@@ -1,0 +1,72 @@
+{
+   "orderCreatedTime":"2015-06-18T10:30:40Z",
+   "address":"Dan Happiness 964 Rama 4 Road",
+   "province":"Bangkok",
+   "postalCode":"10500",
+   "country":"Thailand",
+   "phone":"081-000-0000",
+   "orderItems":[ 
+      { 
+         "itemId":"NIK64254110000000M",
+         "qty":2,
+         "subTotal":4800,
+         "orderShipmentInfo":{ 
+            "address":"Smith Happiness 111 Rama 4 rd.  Silom Bangrak  Bangkok",
+            "postalCode":"10500",
+            "country":"Thailand",
+            "phone":"081-111-2222",
+            "email":"smith@a.com"
+         }
+      },
+      { 
+         "itemId":"ADIM6710300000M",
+         "qty":1,
+         "subTotal":3000,
+         "orderShipmentInfo":{ 
+            "address":"Smith Happiness 111 Rama 4 rd.  Silom Bangrak  Bangkok",
+            "postalCode":"10500",
+            "country":"Thailand",
+            "phone":"081-111-2222",
+            "email":"smith@a.com"
+         }
+      },
+      { 
+         "itemId":"BRO120137440000008",
+         "qty":1,
+         "subTotal":3200,
+         "orderShipmentInfo":{ 
+            "address":"Smith Happiness 111 Rama 4 rd.  Silom Bangrak  Bangkok",
+            "postalCode":"10500",
+            "country":"Thailand",
+            "phone":"081-111-2222",
+            "email":"smith@a.com"
+         }
+      },
+      { 
+         "itemId":"Discount",
+         "qty":1,
+         "subTotal":-200,
+         "orderShipmentInfo":{ 
+            "address":"Smith Happiness 111 Rama 4 rd.  Silom Bangrak  Bangkok",
+            "postalCode":"10500",
+            "country":"Thailand",
+            "phone":"081-111-2222",
+            "email":"smith@a.com"
+         }
+      },
+      { 
+         "itemId":"Shipping Charges",
+         "qty":1,
+         "subTotal":10,
+         "orderShipmentInfo":{ 
+            "address":"Smith Happiness 111 Rama 4 rd.  Silom Bangrak  Bangkok",
+            "postalCode":"10500",
+            "country":"Thailand",
+            "phone":"081-111-2222",
+            "email":"smith@a.com"
+         }
+      }
+   ],
+   "total_item":5,
+   "total_gross":10840
+}

@@ -5,3 +5,9 @@ Namespace Containers,com.oaklandsw.base,order,4
 Reports,com.oaklandsw.base,order,7
 Sample Data,com.oaklandsw.base,order,6
 Structures,com.oaklandsw.base,order,0
+Structures/multi_sale_order_json_input.xml,com.oaklandsw.base,references.0,Structures/sale_order_json.xml,/Root/row
+Structures/multi_sale_order_json_input.xml,com.oaklandsw.base,references.1,Sample Data/sale_order_json/sale_order_collection
+Structures/multi_sale_order_json_output.xml,com.oaklandsw.base,references.0,Sample Data/multi_sale_order_json_output/testout.json
+Structures/multi_sale_order_json_output.xml,com.oaklandsw.base,references.1,Structures/sale_order_json_out.xml,/Root/row
+Structures/sale_order_json.xml,com.oaklandsw.base,references.0,Sample Data/sale_order_json/sale_order_collection
+Structures/sale_order_json_out.xml,com.oaklandsw.base,references.0,Sample Data/sale_order_json_out/out.json
