@@ -380,10 +380,6 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_YE4coLTfEeqPHsPff0tu6w",
-    "version" : "Latest",
-    "type" : "mapper"
-  }, {
     "id" : "DQTechnical",
     "version" : "Latest",
     "type" : "routine"
