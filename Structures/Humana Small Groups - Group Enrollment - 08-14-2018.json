@@ -1,0 +1,1441 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "title": "Small Groups Group Enrollment API",
+    "version": "1.0.0",
+    "contact": {
+      "name": "API Strategy and Solutions Team",
+      "email": "API_Developers@humana.com"
+    },
+    "description": "Enrolls and validates the enrollment of small groups."
+  },
+  "consumes": [
+    "application/json",
+    "application/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml"
+  ],
+  "schemes": [
+    "https"
+  ],
+  "host": "qa-api.humana.com",
+  "basePath": "/v2/small-groups",
+  "paths": {
+    "/": {
+      "post": {
+        "description": "Creates a group in the Humana system and provides the groupId.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/GroupEnrollmentRequest"
+          }
+        ],
+        "operationId": "createGroup",
+        "tags": [
+          "smallGroupEnrollment",
+          "create"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/GroupCreationResponse"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/responses/AuthenticationRequired"
+          },
+          "403": {
+            "$ref": "#/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/responses/Throttled"
+          },
+          "500": {
+            "$ref": "#/responses/InternalServerError"
+          },
+          "503": {
+            "$ref": "#/responses/ServiceUnavailable"
+          }
+        }
+      }
+    },
+    "/{group_id}": {
+      "post": {
+        "description": "Finalizes a group in the Humana system and generates rates for it.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/GroupNumber"
+          },
+          {
+            "$ref": "#/parameters/GroupEnrollmentRequest"
+          }
+        ],
+        "operationId": "finalizeGroup",
+        "tags": [
+          "smallGroupEnrollment",
+          "finalize"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GroupEnrollmentResponse"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/responses/AuthenticationRequired"
+          },
+          "403": {
+            "$ref": "#/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/responses/Throttled"
+          },
+          "500": {
+            "$ref": "#/responses/InternalServerError"
+          },
+          "503": {
+            "$ref": "#/responses/ServiceUnavailable"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GroupEnrollmentResponse": {
+      "description": "A response to a successful group enrollment request.",
+      "type": "object",
+      "required": [
+        "group_id",
+        "final_plan_details"
+      ],
+      "properties": {
+        "group_id": {
+          "$ref": "#/definitions/groupId"
+        },
+        "final_rates": {
+          "$ref": "#/definitions/EnrolledGroupRatesResponse"
+        },
+        "messages":
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ValidationMessage"
+          }
+        }
+      }
+    },
+    "ValidationMessage":{
+      "properties":
+      {
+        "name":{
+          "type": "string"
+        },
+        "description":
+        {
+          "type":"string"
+        }
+      }
+    },
+    "GroupCreationResponse": {
+      "description": "A response to a successful group creation request.",
+      "type": "object",
+      "required": [
+        "group_id",
+        "finalize_url"
+      ],
+      "properties": {
+        "group_id": {
+          "$ref": "#/definitions/groupId"
+        },
+        "finalize_url": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/href"
+            }
+          ],
+          "description": "The URL to POST the original request to in order to finalize the group's enrollment."
+        },
+        "messages":
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ValidationMessage"
+          }
+        }
+      }
+    },
+    "GroupEnrollmentRequest": {
+      "description": "A request to enroll a group, or to finalize that enrollment.",
+      "type": "object",
+      "required": [
+        "partner_profile",
+        "employer",
+        "effective_date",
+        "open_enrollment_start_date",
+        "open_enrollment_end_date",
+        "member_census",
+        "main_address",
+        "primary_location",
+        "coverage_eligibility",
+        "payment",
+        "retiree_requirements",
+        "signed_date"
+      ],
+      "properties": {
+        "partner_profile": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/guid"
+            }
+          ],
+          "description": "A unique identifier for the partner."
+        },
+        "employer": {
+          "$ref": "#/definitions/Employer"
+        },
+        "effective_date": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/date"
+            }
+          ],
+          "description": "The date coverage should be effective."
+        },
+        "general_agency": {
+          "$ref": "#/definitions/GeneralAgency"
+        },
+        "open_enrollment_start_date": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/date"
+            }
+          ],
+          "description": "The date open enrollment for this group begins."
+        },
+        "open_enrollment_end_date": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/date"
+            }
+          ],
+          "description": "The date open enrollment for this group ends."
+        },
+        "member_census": {
+          "$ref": "#/definitions/MemberCensus"
+        },
+        "main_address": {
+          "$ref": "#/definitions/Address"
+        },
+        "primary_location": {
+          "$ref": "#/definitions/EmployerLocation"
+        },
+        "additional_locations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EmployerLocation"
+          },
+          "minItems": 1,
+          "description": "Additional locations for this employer."
+        },
+        "billing_administrator": {
+          "$ref": "#/definitions/ContactPerson"
+        },
+        "benefits_administrator": {
+          "$ref": "#/definitions/ContactPerson"
+        },
+        "prior_coverages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PriorCoverage"
+          },
+          "minItems": 1,
+          "description": "An optional list of prior coverages this employer offered."
+        },
+        "coverage_eligibility": {
+          "$ref": "#/definitions/CoverageEligibility"
+        },
+        "payment": {
+          "$ref": "#/definitions/PaymentDetails"
+        },
+        "retiree_requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RetireeRequirement"
+          },
+          "minItems": 1,
+          "description": "A list of retiree requirements for different lines of coverage."
+        },
+        "signed_date": {
+          "type": "string",
+          "format": "short-date",
+          "description": "The date this application for enrollment was signed."
+        }
+      }
+    },
+    "coverageType": {
+      "description": "The type of coverage provided.",
+      "type": "string",
+      "enum": [
+        "employee",
+        "employeePlusSpouse",
+        "employeePlusChild",
+        "family"
+      ],
+      "example": "employeePlusSpouse"
+    },
+    "lineOfCoverage": {
+      "type": "string",
+      "enum": [
+        "medical",
+        "dental",
+        "vision",
+        "basiclife",
+        "longtermdisability",
+        "shorttermdisability"
+      ],
+      "description": "The line of coverage provided.",
+      "example": "medical"
+    },
+    "groupId": {
+      "type": "string",
+      "description": "The ID of a group.",
+      "example": "838383"
+    },
+    "Employer": {
+      "description": "The employer enrolling a group.",
+      "type": "object",
+      "required": [
+        "name",
+        "establishment_date",
+        "standard_industry_code",
+        "tax_id",
+        "employer_type"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The employer's legal name.",
+          "example": "Acme Corporation",
+          "x-faker": "company.companyName"
+        },
+        "standard_industry_code": {
+          "type": "string",
+          "description": "The SIC (standard industry code) for the company's business.",
+          "example": "8011",
+          "pattern": "^[0-9]{4}$"
+        },
+        "tax_id": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/taxId"
+            }
+          ],
+          "description": "The tax ID for the employer."
+        },
+        "establishment_date": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/date"
+            }
+          ],
+          "description": "The date on which the company was founded and began operations."
+        },
+        "employer_type": {
+          "type": "string",
+          "enum": [
+            "privateSector",
+            "tribalGovernment",
+            "religiousEmployer",
+            "stateGovernment",
+            "foreignGovernment"
+          ],
+          "description": "The type of the employer.",
+          "example": "private"
+        },
+        "member_of_association": {
+          "type": "boolean",
+          "description": "Is this employer a member of an association?",
+          "example": "false",
+          "default": "false"
+        },
+        "excluded_class": {
+          "type": "string",
+          "description": "A class that is excluded from this request.",
+          "enum": ["union", "nonunion", "hourly", "salary", "management", "nonmanagement"]
+        }
+      }
+    },
+    "GeneralAgency": {
+      "properties": {
+        "tax_id_number": {
+          "type": "string",
+          "description": "Agency's tax identifier."
+        },
+        "national_producer_number":{
+            "type": "string"
+          },
+        "system_assign_number": {
+          "type": "string"
+        }
+      }
+    },
+    "MemberCensus": {
+      "description": "Census data for the members to be part of the group.",
+      "type": "object",
+      "required": [
+        "eligible",
+        "total"
+      ],
+      "properties": {
+        "eligible": {
+          "type": "integer",
+          "format": "int32",
+          "exclusiveMinimum": true,
+          "minimum": 0,
+          "description": "The number of employees who are eligible for coverage.",
+          "example": 20,
+          "x-chance": {
+            "natural": {
+              "min": 2,
+              "max": 40
+            }
+          }
+        },
+        "full_time_equivalent": {
+          "type": "integer",
+          "format": "int32",
+          "exclusiveMinimum": true,
+          "minimum": 0,
+          "description": "The number of employees who are full-time equivalent.",
+          "example": 20,
+          "x-chance": {
+            "natural": {
+              "min": 2,
+              "max": 40
+            }
+          }
+        },
+        "payroll": {
+          "type": "integer",
+          "format": "int32",
+          "exclusiveMinimum": true,
+          "minimum": 0,
+          "description": "The total number of employees on the employer's payroll.",
+          "example": 20,
+          "x-chance": {
+            "natural": {
+              "min": 2,
+              "max": 40
+            }
+          }
+        }
+      }
+    },
+    "PriorCoverage": {
+      "description": "Prior coverage offered by the employer.",
+      "type": "object",
+      "required": [
+        "termination_date",
+        "carrier",
+        "line_of_coverage"
+      ],
+      "properties": {
+        "carrier": {
+          "type": "string",
+          "description": "The name of the carrier.",
+          "example": "Humana"
+        },
+        "termination_date": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/date"
+            }
+          ],
+          "description": "The date coverage ended."
+        },
+        "prior_dental_ortho": {
+          "type": "boolean",
+          "description": "Did the prior dental coverage offer orthodontic coverage?",
+          "example": "false",
+          "default": "false"
+        },
+        "line_of_coverage": {
+          "$ref": "#/definitions/lineOfCoverage"
+        }
+      }
+    },
+    "CoverageEligibility": {
+      "description": "A description of the rules by which new employees become eligible for coverage.",
+      "type": "object",
+      "required": [
+        "ineligible_period_length",
+        "ineligible_period_unit",
+        "start_of_coverage"
+      ],
+      "properties": {
+        "ineligible_period_unit": {
+          "type": "string",
+          "enum": [
+            "days",
+            "months"
+          ],
+          "description": "The unit of measure for the period during which a new employee is not eligible for coverage.",
+          "example": "months"
+        },
+        "ineligible_period_length": {
+          "type": "integer",
+          "format": "int32",
+          "minimum": 1,
+          "description": "The length of time during which a new employee is ineligible for coverage, in terms of the specified unit.",
+          "example": 30,
+          "x-chance": {
+            "natural": {
+              "min": 7,
+              "max": 30
+            }
+          }
+        },
+        "start_of_coverage": {
+          "type": "string",
+          "enum": [
+            "firstOfMonth",
+            "immediate",
+            "dateOfHire"
+          ],
+          "description": "The time when coverage becomes effective once the ineligible period ends.",
+          "example": "immediate"
+        }
+      }
+    },
+    "PaymentDetails": {
+      "description": "Information about the means by which this coverage will be paid.",
+      "type": "object",
+      "required": [
+        "method",
+        "due_date",
+        "line_of_coverage"
+      ],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "bankWithdrawal",
+            "invoice"
+          ],
+          "description": "The mechanism by which payments will be retrieved. If bankWithdrawal is selected, the other fields are required.",
+          "example": "bankWithdrawal"
+        },
+        "due_date": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/date"
+            }
+          ],
+          "description": "The date upon which payment is due (or will be drawn)."
+        },
+        "account_number": {
+          "type": "string",
+          "description": "The account number upon which payment will be drawn if bankWithdrawal is the payment method.",
+          "example": "1234567890",
+          "x-chance": "cc"
+        },
+        "routing_number": {
+          "type": "string",
+          "description": "The routing number for the bank upon which payment will be drawn if bankWithdrawal is the payment method.",
+          "example": "1234567890",
+          "x-chance": "cc"
+        },
+        "bank_name": {
+          "type": "string",
+          "description": "The name of the bank upon payment will be drawn if bankWithdrawal is the payment method.",
+          "example": "First Example Bank",
+          "x-faker": "company.companyName"
+        },
+        "account_type": {
+          "type": "string",
+          "enum": [
+            "checking",
+            "saving"
+          ],
+          "description": "The type of the account upon payment will be drawn if bankWithdrawal is the payment method.",
+          "example": "checking"
+        },
+        "line_of_coverage": {
+          "$ref": "#/definitions/lineOfCoverage"
+        }
+      }
+    },
+    "RetireeRequirement": {
+      "description": "A specification of the requirements for retirement for an employee with a particular line of coverage.",
+      "type": "object",
+      "required": [
+        "required_age",
+        "minimum_years_of_service",
+        "line_of_coverage"
+      ],
+      "properties": {
+        "required_age": {
+          "type": "integer",
+          "format": "int32",
+          "minimum": 14,
+          "description": "The minimum age required to qualify for retirement.",
+          "example": 62,
+          "x-chance": {
+            "natural": {
+              "min": 58,
+              "max": 70
+            }
+          }
+        },
+        "minimum_years_of_service": {
+          "type": "integer",
+          "format": "int32",
+          "minimum": 0,
+          "description": "The minimum number of years of service with the employer required to qualify for retirement.",
+          "example": 20,
+          "x-chance": {
+            "natural": {
+              "min": 5,
+              "max": 30
+            }
+          }
+        },
+        "line_of_coverage": {
+          "$ref": "#/definitions/lineOfCoverage"
+        }
+      }
+    },
+    "EmployerLocation": {
+      "description": "A location or division at which the employer has employees and would like to offer coverage.",
+      "type": "object",
+      "required": [
+        "address",
+        "plans",
+        "agents_of_record"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "A description of the location.",
+          "example": "Main Location",
+          "x-faker": "lorem.sentence"
+        },
+        "medical_enrolled_count":
+        {
+          "type": "number",
+          "format": "integer",
+          "example": 50
+        },
+        "address": {
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Address"
+            }
+          ],
+          "description": "The address of the location."
+        },
+        "billing_administrator": {
+          "$ref": "#/definitions/ContactPerson"
+        },
+        "benefits_administrator": {
+          "$ref": "#/definitions/ContactPerson"
+        },
+        "plans": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PlanDetails"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of plans offered at this location."
+        },
+        "agents_of_record": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AgentOfRecord"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of agents assisting in policy writing for this location."
+        }
+      }
+    },
+    "PlanDetails": {
+      "description": "Details about a particular plan into which employees should be enrolled.",
+      "type": "object",
+      "required": [
+        "plan_id",
+        "line_of_coverage"
+      ],
+      "properties": {
+        "plan_id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "The identifier for this plan in the Humana system.",
+          "example": 8989112,
+          "x-chance": {
+            "natural": {
+              "min": 0,
+              "max": 9999999
+            }
+          }
+        },
+        "age_rates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AgeRate"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of age rate definitions for this plan. Either age rates or composite rates can be provided."
+        },
+        "composite_rates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CompositeRate"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of composite rate definitions for this plan. Either age rates or composite rates can be provided."
+        },
+        "volume_amount":
+        {
+          "type": "number",
+          "example": 25000
+        },
+        "riders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RiderDetails"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of riders that apply to this particular plan."
+        },
+        "line_of_coverage": {
+          "$ref": "#/definitions/lineOfCoverage"
+        }
+      }
+    },
+    "EnrolledGroupRatesResponse": {
+      "description": "Details about the rates for the enrolled group.",
+      "type": "object",
+      "required": [
+        "plan_id"
+      ],
+      "properties": {
+        "plan_id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "The identifier for this plan in the Humana system.",
+          "example": 8989112,
+          "x-chance": {
+            "natural": {
+              "min": 0,
+              "max": 9999999
+            }
+          }
+        },
+        "age_rates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AgeRate"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of age rate definitions for this plan. Either age rates or composite rates can be provided."
+        },
+        "composite_rates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CompositeRate"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of composite rate definitions for this plan. Either age rates or composite rates can be provided."
+        }
+      }
+    },
+    "AgentOfRecord": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/AgentDetails"
+        },
+        {
+          "properties": {
+            "writing_agents": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AgentDetails"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "AgentDetails": {
+      "description": "The description of the agent who arranged this policy.",
+      "type": "object",
+      "required": [
+        "is_agency",
+        "tax_id",
+        "national_producer_number",
+        "commission_split",
+        "phone_numbers",
+        "addresses"
+      ],
+      "properties": {
+        "is_agency": {
+          "type": "boolean",
+          "description": "True if the agent is an agency, false if it is an individual agent.",
+          "example": true
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the agent.",
+          "example": "Sample Agent LLC",
+          "x-faker": "company.companyName"
+        },
+        "tax_id": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/taxId"
+            }
+          ],
+          "description": "The tax ID for the agent."
+        },
+        "national_producer_number": {
+          "type": "string",
+          "pattern": "^[0-9]{10}$",
+          "description": "The National Producer Number, an insurance producer identifier assigned by NIPR.",
+          "example": "0000987654"
+        },
+        "commission_split": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/percentage"
+            }
+          ],
+          "description": "The percentage commission split due this agent."
+        },
+        "phone_numbers": {
+          "description": "A list of phone numbers for this agent.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPhoneNumber"
+          },
+          "minItems": 1
+        },
+        "addresses": {
+          "description": "A list of addresses for this agent.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactAddress"
+          },
+          "minItems": 1
+        },
+        "email_addresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactEmailAddress"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of e-mail addresses for this agent."
+        }
+      }
+    },
+    "AgeRate": {
+      "description": "A rate definition where the rate is based on age bands.",
+      "type": "object",
+      "required": [
+        "minimum_age",
+        "maximum_age",
+        "premium"
+      ],
+      "properties": {
+        "minimum_age": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/age"
+            }
+          ],
+          "description": "The minimum age for a person in this age band."
+        },
+        "maximum_age": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/age"
+            }
+          ],
+          "description": "The maximum age for a person in this age band."
+        },
+        "gender": {
+          "$ref": "#/definitions/sex"
+        },
+        "coverage_type": {
+          "$ref": "#/definitions/coverageType"
+        },
+        "premium": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/price"
+            }
+          ],
+          "description": "The premium for this age band."
+        },
+        "number_of_members": {
+          "type": "integer",
+          "format": "int32",
+          "minimum": 1,
+          "description": "The number of employees within this age band.",
+          "example": 20,
+          "x-chance": {
+            "natural": {
+              "min": 1,
+              "max": 25
+            }
+          }
+        }
+      }
+    },
+    "CompositeRate": {
+      "description": "A rate definition where the rate is based on composite rating for a given coverage type.",
+      "type": "object",
+      "required": [
+        "coverage_type",
+        "premium",
+        "number_of_members"
+      ],
+      "properties": {
+        "coverage_type": {
+          "$ref": "#/definitions/coverageType"
+        },
+        "premium": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/price"
+            }
+          ],
+          "description": "The premium for this age band."
+        },
+        "number_of_members": {
+          "type": "integer",
+          "format": "int32",
+          "minimum": 1,
+          "description": "The number of employees who elected this coverage.",
+          "example": 20,
+          "x-chance": {
+            "natural": {
+              "min": 1,
+              "max": 25
+            }
+          }
+        }
+      }
+    },
+    "RiderDetails": {
+      "description": "Details about a specific rider to a policy.",
+      "type": "object",
+      "required": [
+        "rider_id",
+        "premium"
+      ],
+      "properties": {
+        "rider_id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "The Humana ID for a particular rider.",
+          "x-chance": {
+            "natural": {
+              "min": 100000000,
+              "max": 999999999
+            }
+          }
+        },
+        "premium": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/price"
+            }
+          ],
+          "description": "The premium for this particular rider."
+        },
+        "rider_name": {
+          "type": "string",
+          "description": "The name of the rider.",
+          "x-faker": "company.catchPhrase"
+        }
+      }
+    },
+    "ContactPerson": {
+      "description": "A person who can be used as a contact.",
+      "type": "object",
+      "required": [
+        "first_name",
+        "last_name"
+      ],
+      "properties": {
+        "first_name": {
+          "$ref": "#/definitions/firstName"
+        },
+        "last_name": {
+          "$ref": "#/definitions/lastName"
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactAddress"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of postal addresses for this person."
+        },
+        "phone_numbers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPhoneNumber"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of phone numbers for this person."
+        },
+        "email_addresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactEmailAddress"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "A list of e-mail addresses for this person."
+        }
+      }
+    },
+    "Address": {
+      "description": "A basic address.",
+      "type": "object",
+      "required": [
+        "address_line_1",
+        "city",
+        "county",
+        "state",
+        "zip_code"
+      ],
+      "properties": {
+        "address_line_1": {
+          "$ref": "#/definitions/addressLine"
+        },
+        "address_line_2": {
+          "$ref": "#/definitions/addressLine"
+        },
+        "state": {
+          "$ref": "#/definitions/state"
+        },
+        "city": {
+          "$ref": "#/definitions/city"
+        },
+        "county": {
+          "$ref": "#/definitions/county"
+        },
+        "zip_code": {
+          "$ref": "#/definitions/zipCode"
+        }
+      }
+    },
+    "ContactAddress": {
+      "description": "The address of a contact.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/Address"
+        }
+      ],
+      "required": [
+        "address_line_1",
+        "address_type",
+        "city",
+        "county",
+        "state",
+        "zip_code"
+      ],
+      "properties": {
+        "address_type": {
+          "type": "string",
+          "enum": [
+            "home",
+            "work",
+            "mailing",
+            "billing",
+            "legal",
+            "shipping",
+            "location"
+          ],
+          "description": "The type of this address.",
+          "example": "billing"
+        }
+      }
+    },
+    "ContactPhoneNumber": {
+      "description": "A phone number that can be used as a means of contact.",
+      "type": "object",
+      "required": [
+        "phone_number_type",
+        "area_code",
+        "exchange",
+        "subscriber"
+      ],
+      "properties": {
+        "phone_number_type": {
+          "type": "string",
+          "enum": [
+            "cell",
+            "fax",
+            "home",
+            "work",
+            "pager",
+            "location",
+            "billingOffice",
+            "serviceLocation"
+          ],
+          "description": "The type of this phone number.",
+          "example": "cell"
+        },
+        "area_code": {
+          "$ref": "#/definitions/areaCode"
+        },
+        "exchange": {
+          "$ref": "#/definitions/telephoneExchange"
+        },
+        "subscriber": {
+          "$ref": "#/definitions/telephoneSubscriber"
+        },
+        "extension": {
+          "$ref": "#/definitions/telephoneExtension"
+        }
+      }
+    },
+    "ContactEmailAddress": {
+      "description": "An e-mail address that can be used as a means of contact.",
+      "type": "object",
+      "required": [
+        "email_address_type",
+        "email_address"
+      ],
+      "properties": {
+        "email_address_type": {
+          "type": "string",
+          "enum": [
+            "personal",
+            "work"
+          ],
+          "description": "The type of this e-mail address.",
+          "example": "work"
+        },
+        "email_address": {
+          "type": "string",
+          "description": "An e-mail address.",
+          "x-chance": "email"
+        }
+      }
+    },
+    "href": {
+      "type": "string",
+      "example": "http://www.google.com",
+      "description": "A Uniform Resource Locator (url).",
+      "pattern": "^(http|https)://[a-zA-Z./]+$",
+      "x-chance": "url"
+    },
+    "guid": {
+      "type": "string",
+      "example": "92194500-A391-4643-B3C9-CFD48407872B",
+      "description": "A Globally Unique Identifier, created with an implementation of the UUID standard.",
+      "pattern": "[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}",
+      "x-chance": "guid"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "example": "1970-01-01",
+      "x-chance": "date",
+      "description": "A date in RFC3339 full-date format."
+    },
+    "firstName": {
+      "type": "string",
+      "example": "Bob",
+      "description": "The first name of a person.",
+      "x-chance": {
+        "first": {
+          "nationality": "en"
+        }
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "example": "Bob",
+      "description": "The first name of a person.",
+      "x-chance": {
+        "last": {
+          "nationality": "en"
+        }
+      }
+    },
+    "addressLine": {
+      "type": "string",
+      "example": "1000 Sample Rd",
+      "description": "A street line in an address.",
+      "x-chance": "address"
+    },
+    "state": {
+      "type": "string",
+      "example": "KY",
+      "pattern": "[A-Z]{2}",
+      "description": "The abbreviation for a state.",
+      "x-chance": "state"
+    },
+    "city": {
+      "type": "string",
+      "example": "Louisville",
+      "description": "The name of a city.",
+      "x-chance": "city"
+    },
+    "county": {
+      "type": "string",
+      "example": "Monroe",
+      "description": "The name of a county in a state.",
+      "x-chance": "city"
+    },
+    "zipCode": {
+      "type": "string",
+      "example": "20521",
+      "pattern": "^[0-9]{5}$",
+      "description": "A five-digit ZIPCode.",
+      "x-chance": "zip"
+    },
+    "countryCode": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 999,
+      "description": "The country code for an E.164 phone number.",
+      "example": 1
+    },
+    "areaCode": {
+      "type": "string",
+      "pattern": "^[2-9][0-9]{2}$",
+      "description": "The area code for a phone number in the NANPA system (country code 1).",
+      "example": "463"
+    },
+    "telephoneExchange": {
+      "type": "string",
+      "pattern": "^[2-9][0-9]{2}$",
+      "description": "The central office/exchange code for a phone number in the NANPA system (country code 1).",
+      "example": "555"
+    },
+    "telephoneSubscriber": {
+      "type": "string",
+      "pattern": "^[0-9]{4}$",
+      "description": "The subscriber line number for a phone number in the NANPA system (country code 1).",
+      "example": "1212"
+    },
+    "telephoneExtension": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "The extension for a specific individual on a given phone number.",
+      "example": "123"
+    },
+    "sex": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female"
+      ],
+      "description": "The biological sex of a person.",
+      "example": "female"
+    },
+    "age": {
+      "type": "number",
+      "format": "int32",
+      "minimum": 0,
+      "maximum": 150,
+      "description": "The age of a person.",
+      "x-chance": "age"
+    },
+    "price": {
+      "type": "number",
+      "format": "double",
+      "minimum": 0,
+      "description": "A price, as defined as a two decimal place fractional value that ranges from 0 to 10,000.",
+      "x-chance": {
+        "floating": {
+          "fixed": 2,
+          "min": 0.01,
+          "max": 10000
+        }
+      }
+    },
+    "taxId": {
+      "type": "string",
+      "description": "An SSN, ITIN, or EIN.",
+      "example": "12-3456789",
+      "pattern": "^([0-9]{3}-[0-9]{2}-[0-9]{4}|[0-9]{2}-[0-9]{7})$"
+    },
+    "percentage": {
+      "type": "number",
+      "format": "double",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "A percentage value.",
+      "x-chance": {
+        "floating": {
+          "fixed": 2,
+          "min": 0,
+          "max": 100
+        }
+      }
+    },
+    "Errors": {
+      "description": "An error response from a service.",
+      "type": "object",
+      "required": [
+        "errors"
+      ],
+      "properties": {
+        "errors": {
+          "$ref": "#/definitions/ErrorArray"
+        }
+      }
+    },
+    "ErrorArray": {
+      "description": "A collection of errors from a service.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Error"
+      }
+    },
+    "Error": {
+      "description": "A specific instance of an error.",
+      "type": "object",
+      "required": [
+        "code",
+        "status",
+        "detail"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "error1_firstName",
+          "description": "A unique identifier for this particular occurrence of the problem. Used to troubleshoot this occurance of this error.",
+          "x-chance": "guid"
+        },
+        "code": {
+          "type": "string",
+          "example": "XB400",
+          "description": "An application-specific error code, expressed as a string value.",
+          "x-chance": "postal"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int64",
+          "pattern": "[1-5][0-2][0-9]",
+          "example": 401,
+          "description": "The HTTP status code applicable to this problem, expressed as an integer value (400,500)."
+        },
+        "title": {
+          "type": "string",
+          "example": "User First Name cannot be empty",
+          "description": "A short, human-readable summary of the problem that SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization.",
+          "x-faker": "company.catchPhrase"
+        },
+        "detail": {
+          "type": "string",
+          "example": "Enter a value in the First Name field. If you do not know the first name then enter a space. The First Name field cannot be submitted with a null.",
+          "description": "A human-readable explanation specific to this occurrence of the problem. Like title, this field�s value can be localized.",
+          "x-faker": "hacker.phrase"
+        },
+        "Links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/href"
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "GroupNumber": {
+      "name": "group_id",
+      "in": "path",
+      "required": true,
+      "description": "The group number that uniquely identifies the group on which operations should be performed.",
+      "type": "string"
+    },
+    "GroupEnrollmentRequest": {
+      "name": "group_enrollment_request",
+      "in": "body",
+      "description": "The details necessary to enroll a group.",
+      "schema": {
+        "$ref": "#/definitions/GroupEnrollmentRequest"
+      },
+      "required": true
+    }
+  },
+  "responses": {
+    "BadRequest": {
+      "description": "Bad Request",
+      "schema": {
+        "$ref": "#/definitions/Errors"
+      }
+    },
+    "AuthenticationRequired": {
+      "description": "Authentication Required",
+      "schema": {
+        "$ref": "#/definitions/Errors"
+      }
+    },
+    "Unauthorized": {
+      "description": "Unauthorized Request",
+      "schema": {
+        "$ref": "#/definitions/Errors"
+      }
+    },
+    "NotFound": {
+      "description": "Requested Item Not Found",
+      "schema": {
+        "$ref": "#/definitions/Errors"
+      }
+    },
+    "Throttled": {
+      "description": "Request Limit Exceeded",
+      "schema": {
+        "$ref": "#/definitions/Errors"
+      }
+    },
+    "InternalServerError": {
+      "description": "Internal Server Error",
+      "schema": {
+        "$ref": "#/definitions/Errors"
+      }
+    },
+    "ServiceUnavailable": {
+      "description": "Service Unavailable",
+      "schema": {
+        "$ref": "#/definitions/Errors"
+      }
+    }
+  }
+}

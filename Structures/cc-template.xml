@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="">
+	<FileInformation>
+		<MessageID>	9f096abb-13ec-4936-be5d-61227601550e	</MessageID>
+		<FileName>	999999999_warnerpacific_ccsb_file_20190312154050.xml	</FileName>
+		<EnrollmentAction>	Open Enrollment	</EnrollmentAction>
+		<SenderID>	warnerpacific	</SenderID>
+		<ReceiverID>	Covered California	</ReceiverID>
+		<FileAttachments>
+			<FileAttachment>	999999999_warnerpacific_ccsb_file_filename_20190312154051.pdf	</FileAttachment>
+			<FileAttachment>	999999999_warnerpacific_ccsb_file_filename_Docs_20190312154051.pdf	</FileAttachment>
+			<FileAttachment>	999999999_warnerpacific_ccsb_file_filename_Note_20190312154051.pdf	</FileAttachment>
+			<FileAttachment>	999999999_warnerpacific_ccsb_file_filename_EE_Apps_20190312154051.pdf	</FileAttachment>
+		</FileAttachments>
+	</FileInformation>
+	<Employer>
+		<EmployerTypeCode>	C	</EmployerTypeCode>
+		<ApplicationReceivedDate>	2019-03-12	</ApplicationReceivedDate>
+		<BusinessName>	XYZ Company	</BusinessName>
+		<FEIN>	99999999	</FEIN>
+		<DBA>	XYZ Company DBA Name	</DBA>
+		<SEIN></SEIN>
+		<NameReporting>	Business Legal Name	</NameReporting>
+		<OrganizationType>	Private	</OrganizationType>
+		<TotalEmployees>	3	</TotalEmployees>
+		<TotalEligibleEmployees>	3	</TotalEligibleEmployees>
+		<CoverageEffectiveDate>	2019-04-01	</CoverageEffectiveDate>
+		<SICCode>	8021	</SICCode>
+		<OfferDependentCoverage>	Y	</OfferDependentCoverage>
+		<OfferNonRegisteredCoverage>	Y	</OfferNonRegisteredCoverage>
+		<CompanySubjectTo>	Cal-COBRA	</CompanySubjectTo>
+		<More20Employees>	N	</More20Employees>
+		<ContactPersonName>
+			<LastName>	John	</LastName>
+			<FirstName>	Doe	</FirstName>
+		</ContactPersonName>
+		<ContactPhoneNumber>	1234567890	</ContactPhoneNumber>
+		<ContactPhoneNumberExt></ContactPhoneNumberExt>
+		<ContactEmail>	jdoe@email.com	</ContactEmail>
+		<ContactPreferredContactMode>	Email	</ContactPreferredContactMode>
+		<ContactLanguage>	EN	</ContactLanguage>
+		<AuthorizedRepresentativeName>
+			<LastName>	Jane	</LastName>
+			<FirstName>	Crow	</FirstName>
+		</AuthorizedRepresentativeName>
+		<AuthorizedRepresentativePhoneNumber>	(123) 456-7890	</AuthorizedRepresentativePhoneNumber>
+		<AuthorizedRepresentativePhoneNumberExt></AuthorizedRepresentativePhoneNumberExt>
+		<AuthorizedRepresentativeEmail>	jcrow@email.com	</AuthorizedRepresentativeEmail>
+		<BusinessAddress>
+			<Addressline1>	123 Street Way	</Addressline1>
+			<Addressline2>	Suite B	</Addressline2>
+			<CityName>	Pacifica	</CityName>
+			<StateCode>	CA	</StateCode>
+			<PostalCode>	94044	</PostalCode>
+			<CountyName>	San Mateo	</CountyName>
+		</BusinessAddress>
+		<RegionCode>	CA017	</RegionCode>
+		<SameBusinessMailing>	Y	</SameBusinessMailing>
+		<SameBusinessBilling>	Y	</SameBusinessBilling>
+		<MailingAddress>
+			<Mailingline1>	123 Street Way	</Mailingline1>
+			<Mailingline2>	Suite B	</Mailingline2>
+			<CityName>	Pacifica	</CityName>
+			<StateCode>	CA	</StateCode>
+			<PostalCode>	94044	</PostalCode>
+			<CountyName>	San Mateo	</CountyName>
+		</MailingAddress>
+		<Billingddress>
+			<Billingline1>	123 Street Way	</Billingline1>
+			<Billingline2>	Suite B	</Billingline2>
+			<CityName>	Pacifica	</CityName>
+			<StateCode>	CA	</StateCode>
+			<PostalCode>	94044	</PostalCode>
+			<CountyName>	San Mateo	</CountyName>
+		</Billingddress>
+		<Agent>
+			<GeneralAgent>	00001	</GeneralAgent>
+			<InsuranceLicense>	0832553	</InsuranceLicense>
+			<AgentName>
+				<FirstName>	John	</FirstName>
+				<LastName>	Smith	</LastName>
+			</AgentName>
+		</Agent>
+		<TierLevel>	BS	</TierLevel>
+		<Plan>
+			<PlanLevel>	S	</PlanLevel>
+			<ReferenceHealthInsCarrier>	40513	</ReferenceHealthInsCarrier>
+			<ReferencePlanName>	40513CA0400004	</ReferencePlanName>
+			<EmployerContribution_Employee>	80	</EmployerContribution_Employee>
+			<EmployerContribution_Dependent>	0	</EmployerContribution_Dependent>
+		</Plan>
+		<businessduration>	3 Months Or More		</businessduration>
+		<Employees>
+			<Employee>
+				<employee_decliningcoverage>	N	</employee_decliningcoverage>
+				<employee_firstname>	Jim	</employee_firstname>
+				<employee_middlename>	P	</employee_middlename>
+				<employee_lastname>	Schmoe	</employee_lastname>
+				<employee_suffix></employee_suffix>
+				<employee_ssn>	123-45-6489	</employee_ssn>
+				<employee_dob>	1996-07-07	</employee_dob>
+				<employee_sex>	M	</employee_sex>
+				<employee_homeaddress1>	123 Street	</employee_homeaddress1>
+				<employee_homeaddress2>	#503	</employee_homeaddress2>
+				<employee_city>	San Francisco	</employee_city>
+				<employee_state>	CA	</employee_state>
+				<employee_zipcode>	94132	</employee_zipcode>
+				<employee_county>	San Francisco	</employee_county>
+				<employee_samemailing>	Y	</employee_samemailing>
+				<employee_mailing1>	123 Street	</employee_mailing1>
+				<employee_mailing2>	#503	</employee_mailing2>
+				<employee_mailing_city>	San Francisco	</employee_mailing_city>
+				<employee_mailing_state>	CA	</employee_mailing_state>
+				<employee_mailing_zipcode>	94132	</employee_mailing_zipcode>
+				<employee_mailing_county>	San Francisco	</employee_mailing_county>
+				<employee_communication_method>	E	</employee_communication_method>
+				<employee_email>	jschmoe@email.com	</employee_email>
+				<employee_phone_type>	C	</employee_phone_type>
+				<employee_phone>	(777) 777-7777	</employee_phone>
+				<employee_calcobra></employee_calcobra>
+				<employee_calcobra_effective_date></employee_calcobra_effective_date>
+				<employee_calcobra_event></employee_calcobra_event>
+				<employee_calcobra_event_date></employee_calcobra_event_date>
+				<employee_marital>	S	</employee_marital>
+				<employee_language>	EN	</employee_language>
+				<employee_origin></employee_origin>
+				<employee_origintype></employee_origintype>
+				<employee_originother></employee_originother>
+				<employee_race>	White	</employee_race>
+				<employee_raceother></employee_raceother>
+				<employee_americanindian_tribe></employee_americanindian_tribe>
+				<employee_healthplan>	40513CA0400004	</employee_healthplan>
+				<employee_dentalplan></employee_dentalplan>
+				<employee_declining_coverage_for></employee_declining_coverage_for>
+				<employee_reasondeclining></employee_reasondeclining>
+			</Employee>
+		</Employees>
+	</Employer>
+</Group>						

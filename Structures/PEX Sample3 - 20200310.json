@@ -1,0 +1,250 @@
+{
+	"Employer": {
+		"GroupNumber": "546455",
+		"CompanyName": "Test",
+		"CompanyAddress": "2233 South East",
+		"CompanyCity": "Fullertn",
+		"CompanyCounty": "Orange",
+		"CompanyState": "CA",
+		"CompanyZip": "92831",
+		"CompanyType": "Corporation",
+		"OtherCompanyType": "",
+		"TypeofBusiness": "Cook Shop",
+		"DateEstablished": "11/08/2019",
+		"SIC": "3234,4334",
+		"DBA": "Jack Flas",
+		"FederalTaxID": "43434344",
+		"Medical Coverage Plan List": [
+			{
+				"Name": "Anthem Bronze PPO 70/6300/35% (3KER) (PPO)",
+				"Type": "PPO",
+				"Metallic": "Bronze",
+				"Network": "Prudent Buyer PPO",
+				"ContractCode": ""
+			},
+			{
+				"Name": "Anthem Silver PPO 55/1750/35% (3KH7) (PPO)",
+				"Type": "PPO",
+				"Metallic": "Silver",
+				"Network": "Prudent Buyer PPO",
+				"ContractCode": ""
+			}
+		],
+		"NumberofEmployees": "43",
+		"NumberofEligibleFulltimeEmployees": "3",
+		"NumberParttimeEmployees": "4",
+		"NumberofEmployeesinMedical": "4",
+		"NumberofEligibleDecliningEmployees": "6",
+		"NumberofIneligibleEmployees": "6",
+		"PrimaryContactFirstName": "Joe",
+		"PrimaryContactLastName": "Smith",
+		"PrimaryContactTitleIDNo": "Manager Big Shot",
+		"PrimaryContactEmail": "bigshot@b.com",
+		"PrimaryContactPhone": "(464) 654-6546",
+		"PrimaryAgencyName": "AgencyX",
+		"PrimaryAgencyIDNumber": "X",
+		"PrimaryAgencyLastName": "John",
+		"PrimaryAgencyFIrstName": "Agency",
+		"PrimaryAgencyTitleIDNo": "Mgr of Agency",
+		"PrimaryAgencyBrokerContactPayableIDNumber": "",
+		"PrimaryAgencyAddress": "111 East St",
+		"PrimaryAgencyCity": "Anaheim",
+		"PrimaryAgencyState": "CA",
+		"PrimaryAgencyZip": "92831",
+		"PrimaryAgencyEmail": "agency@a.com",
+		"PrimaryAgencyPhone": "(546) 465-5556",
+		"GAName": "GeneralAgency Name",
+		"GATitleIDNo": "idnumber",
+		"GAAddress": "92393 General Agnecy Name",
+		"GACity": "Agency",
+		"GAState": "CA",
+		"GAZip": "92831",
+		"GAEmail": "generalA@g.com"
+	},
+	"Employees": [
+		{
+			"appGAITApplicantID": "132d4307-b8ac-4a6b-bf8a-80f93e26d708",
+			"appEnrollApplicantID": "29ca5c4e-5634-4d71-951a-ec92a9a3d508",
+			"appAccountID": "d8cba976-47ad-4a4b-b25d-8355a9a3d508",
+			"appLastName": "Loop",
+			"appFirstName": "Hole",
+			"appGender": "Male",
+			"appDateofBirth": "01/28/1959",
+			"appRelationship": "Employee",
+			"appPhoneNumber": "(714) 555-1212",
+			"appEmailAddress": "agordon@fairway.com",
+			"appHomeAddressLine": "2918 Longspur Dr",
+			"appHomeAddressLine2": "",
+			"appHomeZipCode": "90007",
+			"appHomeCity": "Dockweiler",
+			"appMaritalStatus": "Married",
+			"appMedical": "Anthem Silver PPO 55/1750/35% (3KH7) (PPO)",
+			"RelationshipStatus": "",
+			"SocialSecurityNumber": "555-66-7777",
+			"Dependents": [
+				{
+					"appGAITApplicantID": "edcbef0e-9a1f-4c6a-b077-8af93e26d708",
+					"appEnrollApplicantID": "5d871a7e-5e22-4d27-b415-8b2ccfbcd608",
+					"appAccountID": "",
+					"appLastName": "Loop",
+					"appFirstName": "Stick",
+					"appGender": "Female",
+					"appDateofBirth": "10/10/1998",
+					"appRelationship": "Spouse",
+					"appPhoneNumber": "",
+					"appEmailAddress": "",
+					"appHomeAddressLine": "",
+					"appHomeAddressLine2": "",
+					"appHomeZipCode": "",
+					"appHomeCity": "",
+					"appMaritalStatus": "",
+					"appMedical": "Enroll",
+					"RelationshipStatus": "",
+					"SocialSecurityNumber": "444-55-6666"
+                },
+                {
+					"appGAITApplicantID": "edcbef0e-9a1f-4c6a-b077-8af93e26d708",
+					"appEnrollApplicantID": "5d871a7e-5e22-4d27-b415-8b2ccfbcd608",
+					"appAccountID": "",
+					"appLastName": "Loop",
+					"appFirstName": "Circle",
+					"appGender": "Female",
+					"appDateofBirth": "10/10/1998",
+					"appRelationship": "Child",
+					"appPhoneNumber": "",
+					"appEmailAddress": "",
+					"appHomeAddressLine": "",
+					"appHomeAddressLine2": "",
+					"appHomeZipCode": "",
+					"appHomeCity": "",
+					"appMaritalStatus": "",
+					"appMedical": "Enroll",
+					"RelationshipStatus": "",
+					"SocialSecurityNumber": "444-55-6666"
+				}
+			],
+			"Coverage": [
+				{
+					"Carrier Name": "My coverage",
+					"Carrier Phone": "(714) 555-1212",
+					"Policy ID / Plan Name": "0564AWDAd",
+					"Policy Start Date": "07/01/2019",
+					"Policy End Date": "",
+					"Enrolling Members": "Gregitus Veritus Gordon",
+					"Type": "Individual"
+                },
+                {
+					"Carrier Name": "My coverage",
+					"Carrier Phone": "(714) 555-1212",
+					"Policy ID / Plan Name": "0564AWDAd",
+					"Policy Start Date": "07/01/2019",
+					"Policy End Date": "",
+					"Enrolling Members": "Gregitus Veritus Gordon",
+					"Type": "Individual"
+				}
+			]
+        },
+        {
+			"appGAITApplicantID": "132d4307-b8ac-4a6b-bf8a-80f93e26d708",
+			"appEnrollApplicantID": "29ca5c4e-5634-4d71-951a-ec92a9a3d508",
+			"appAccountID": "d8cba976-47ad-4a4b-b25d-8355a9a3d508",
+			"appLastName": "Gordon",
+			"appFirstName": "Aaron",
+			"appGender": "Male",
+			"appDateofBirth": "01/28/1959",
+			"appRelationship": "Employee",
+			"appPhoneNumber": "(714) 555-1212",
+			"appEmailAddress": "agordon@fairway.com",
+			"appHomeAddressLine": "2918 Longspur Dr",
+			"appHomeAddressLine2": "",
+			"appHomeZipCode": "90007",
+			"appHomeCity": "Dockweiler",
+			"appMaritalStatus": "Married",
+			"appMedical": "Anthem Silver PPO 55/1750/35% (3KH7) (PPO)",
+			"RelationshipStatus": "",
+			"SocialSecurityNumber": "555-66-7777",
+			"Dependents": [
+				{
+					"appGAITApplicantID": "edcbef0e-9a1f-4c6a-b077-8af93e26d708",
+					"appEnrollApplicantID": "5d871a7e-5e22-4d27-b415-8b2ccfbcd608",
+					"appAccountID": "",
+					"appLastName": "Gordon",
+					"appFirstName": "Gloria",
+					"appGender": "Female",
+					"appDateofBirth": "10/10/1998",
+					"appRelationship": "Spouse",
+					"appPhoneNumber": "",
+					"appEmailAddress": "",
+					"appHomeAddressLine": "",
+					"appHomeAddressLine2": "",
+					"appHomeZipCode": "",
+					"appHomeCity": "",
+					"appMaritalStatus": "",
+					"appMedical": "Enroll",
+					"RelationshipStatus": "",
+					"SocialSecurityNumber": "444-55-6666"
+                },
+                {
+					"appGAITApplicantID": "edcbef0e-9a1f-4c6a-b077-8af93e26d708",
+					"appEnrollApplicantID": "5d871a7e-5e22-4d27-b415-8b2ccfbcd608",
+					"appAccountID": "",
+					"appLastName": "Gordon",
+					"appFirstName": "Helen",
+					"appGender": "Female",
+					"appDateofBirth": "10/10/1998",
+					"appRelationship": "Child",
+					"appPhoneNumber": "",
+					"appEmailAddress": "",
+					"appHomeAddressLine": "",
+					"appHomeAddressLine2": "",
+					"appHomeZipCode": "",
+					"appHomeCity": "",
+					"appMaritalStatus": "",
+					"appMedical": "Enroll",
+					"RelationshipStatus": "",
+					"SocialSecurityNumber": "444-55-6666"
+				}
+			],
+			"Coverage": [
+				{
+					"Carrier Name": "My coverage",
+					"Carrier Phone": "(714) 555-1212",
+					"Policy ID / Plan Name": "0564AWDAd",
+					"Policy Start Date": "07/01/2019",
+					"Policy End Date": "",
+					"Enrolling Members": "Gregitus Veritus Gordon",
+					"Type": "Individual"
+                },
+                {
+					"Carrier Name": "My coverage",
+					"Carrier Phone": "(714) 555-1212",
+					"Policy ID / Plan Name": "0564AWDAd",
+					"Policy Start Date": "07/01/2019",
+					"Policy End Date": "",
+					"Enrolling Members": "Gregitus Veritus Gordon",
+					"Type": "Individual"
+				}
+			]
+		}
+	],
+	"FileAttachments": [
+		{
+			"FileName": "fmcdl34mgo1.pdf",
+			"FilePath": "\\\\Warner142\\PDF\\InternalQA\\GAIT\\2019\\06\\21457622\\04cb6138-1c38-4a23-a279-9eb04ceed608_fmcdl34mgo1.pdf",
+			"FileType": "Billing",
+			"FileTypeId": "41cd8fa6-76bf-4a9b-aebf-a8db00ab26e0"
+		},
+		{
+			"FileName": "Ineligible Plan Report-10027447.pdf",
+			"FilePath": "\\\\Warner142\\PDF\\InternalQA\\GAIT\\2019\\06\\21457622\\4ec0b618-328e-401f-9b74-81c09fded608_Ineligible Plan Report-10027447.pdf",
+			"FileType": "Underwriting Questions",
+			"FileTypeId": "161f1e2e-9bd2-4a87-87b7-a8db00ab26e7"
+		},
+		{
+			"FileName": "GatherTool.PNG",
+			"FilePath": "\\\\Warner142\\PDF\\InternalQA\\GAIT\\2019\\06\\21457625\\e14982a4-49ae-44c1-97fc-f8669fded608_GatherTool.PNG",
+			"FileType": "Current Census Information",
+			"FileTypeId": "afe48a4d-ea91-46aa-b55b-a8db00ab26e3"
+		}
+	]
+}
