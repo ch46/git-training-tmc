@@ -42,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:/0wVW6VR5S4c+hDSDPoXvFDFeZz+NJINSw4t9kat"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:O/N45TAiFWLzqyvhUOfHaIOQ0iYvYiAkMcsZGUis"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -77,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:HQfZhRd8PplkDFML1ek9R6JN/IrPxDOuYKvqM/EJ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:aFGysdZi2iPoKtnZ/Q7yxFrff+S8xQ6iK1Cv2cTl"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -114,7 +114,6 @@
   </parameters>
   <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;D:/PEX/PEX20200720.json&quot;"/>
     <elementParameter field="RADIO" name="AS_STRING" value="true"/>
     <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
@@ -128,42 +127,6 @@
     <metadata connector="FLOW" name="tFileInputRaw_1">
       <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
     </metadata>
-  </node>
-  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192" sizeX="64" sizeY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
-    <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
-    <elementParameter field="HMAP_PATH" name="HMAP_PATH" value="&quot;Jobs/PEX_CalChoice/tHMap_1&quot;"/>
-    <elementParameter field="RADIO" name="SOURCE_AS_MAP" show="false" value="false"/>
-    <elementParameter field="RADIO" name="SOURCE_AS_STRING" value="true"/>
-    <elementParameter field="RADIO" name="AS_MAP" show="false" value="false"/>
-    <elementParameter field="RADIO" name="AS_STRING" show="false" value="false"/>
-    <elementParameter field="RADIO" name="AS_BYTEARRAY" show="false" value="false"/>
-    <elementParameter field="RADIO" name="AS_INPUTSTREAM" show="false" value="false"/>
-    <elementParameter field="RADIO" name="AS_DOCUMENT" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" show="false" value="true"/>
-    <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SINGLE_COLUMN_BYTEARRAY" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SINGLE_COLUMN_DOCUMENT" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HIDE_INPUT_SET" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HIDE_OUTPUT_SET" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SHOW_INPUT_STRING" show="false" value="true"/>
-    <elementParameter field="TEXT" name="SHOW_INPUT_MAP" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SHOW_OUTPUT_STRING" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SHOW_OUTPUT_MAP" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SHOW_OUTPUT_DOCUMENT" show="false" value="false"/>
-    <elementParameter field="RADIO" name="IS_NEW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SHOW_OUTPUT_BYTES" show="false" value="false"/>
-    <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" show="false" value="true"/>
-    <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" show="false" value="true"/>
-    <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
-    <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="MAP_ROW_BY_ROW" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="EXCEPTION" value="64"/>
-    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tFileOutputJSON" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputJSON_1"/>
@@ -224,6 +187,7 @@
   </node>
   <node componentName="tFileInputJSON" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputJSON_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
     <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
     <elementParameter field="CHECK" name="USEURL" value="false"/>
@@ -266,6 +230,7 @@
   </node>
   <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractJSONFields_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
     <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
     <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="CompanyAddress"/>
@@ -335,6 +300,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -371,11 +337,6 @@
       <column comment="" key="false" length="-1" name="CompanyAddressIsResidence" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputRaw_1" target="tHMap_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -383,10 +344,12 @@
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFileInputJSON_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputJSON_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <subjob>
@@ -409,13 +372,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9822844c-dbcd-481f-b68d-372de6a714cc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CtzDbiW6HSL3YWjI4Q19uzBm33F3sPxAyBIVM6HVfTMjuOugJEBODImUmu8vjcqlfVOo57AyJxc5&#13;
-EljhZhxYWw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5c051b91-c0c9-49bc-8f95-6bad4d547555"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mHnz3ve0eNuqMdXfAnMz1FP4Dxp0zRbK4J8xMcHeXUTxDkNZ2boH5ixXIyfblktVgMAB1PQUetE1&#13;
-JYifX0io0g==</DigestValue></Reference></SignedInfo><SignatureValue>ZogGFXTx2RnNozmPLa5QYXWTSP8hacK7k0iD9H57tVctlTPUiup+UVfWHW8t58vKONA0svYvx42j&#13;
-n+TMq26lfjGJVcdQliXrRX74yvKxXBx3DbGx0ijnlVuH3T8v6SW8n2teVnHT9k2aGFn/66e0idUS&#13;
-nMTiyXczkhU4iW+HNPkIi7lF60syuwX1XWwYnbebeu0IC1cHSm7MBhPP4SJW8eEXVchgfTENGyfh&#13;
-iEJTsr2lhuEaILcaLUwOlpbPAHV879BTHHOehVHo+AN1uWGulunVDAmyLXFRYKRHAlExZyR7WIhn&#13;
-IsL5H/DAb+nsIqGPLr3Wd3NtSA5Sal9VvgNPpg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_831be0c5-dd01-41f4-b716-d12af5f044e6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uS9UlCUJ3xSSkVZ2OwD5Y7PHfjxzLLACgYAO/h+icpOHiv2fS4IyOQQy9xv4G3toap2beiK0c25Q&#13;
+EoqV3O8bUg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4fdd561a-f161-42af-b55f-350b17792a81"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>E6YiBFJZi5xUI73LjuO/YOSZnB6vGPm4Tbd68/7RD/EMiNA9t5fGy2/eF1FEZI44bULnjHYG7p+x&#13;
+4ldrBu+lYQ==</DigestValue></Reference></SignedInfo><SignatureValue>N1Jm9O044b7Q0SuM9mq27I/73F4SmrDJe6ZywZZoKKZwLOJSCTxdMjvhLlG81hlPaXJkx5oW1DPW&#13;
+gBSmGKeVbCBtf1659G/UiRtAjEghmmYl6Tj0vVN0TGMre8+AeFuqdxfX7wq4rwo9e7PHtFcFxlLi&#13;
+5baaxqIjIysZTbBCkb46TbGaWelOCY8Qp83UVEN023R980OlegLwhbr8I/JoCByCp/SslGJwwdy4&#13;
+EQHkLT7RuPrmDIFJ4z3M5OgPNc9fXuqsKgrbGkzKe0A/HgWVjJBsrUlxE9H7reHPtIHY7vL+FDJ5&#13;
+CAfYBnZ/CYq9dz+lHne6yrvmfJNfN4gBjOHFdQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -437,4 +400,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5c051b91-c0c9-49bc-8f95-6bad4d547555" Target="#_9822844c-dbcd-481f-b68d-372de6a714cc"><Timestamp>2020-07-21 16:07:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4fdd561a-f161-42af-b55f-350b17792a81" Target="#_831be0c5-dd01-41f4-b716-d12af5f044e6"><Timestamp>2020-07-21 17:46:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
