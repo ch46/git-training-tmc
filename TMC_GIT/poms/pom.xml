@@ -16,6 +16,7 @@
     <module>jobs/process/pex_2_0.1</module>
     <module>jobs/process/testtrest_0.1</module>
     <module>jobs/process/pex_20200622_0.1</module>
+    <module>jobs/process/pex_calchoice_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TMC_GIT</talend.project.name>
