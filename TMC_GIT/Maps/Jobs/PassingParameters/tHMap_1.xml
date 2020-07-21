@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/localhost-2020-07-20-2.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' inputRep='177' outputRep='177' nextMap='' inputStructUserName='localhost-2020-07-20-2' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_1' incarnation='2505'>
-  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='localhost-2020-07-20-2'>
+<root t='190' id='1' V190='11' inStruct='Structures/localhost-2020-07-20-2.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' inputRep='177' outputRep='177' nextMap='' inputStructUserName='localhost-2020-07-20-2' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_1' incarnation='2535'>
+  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='localhost-2020-07-20-2'>
     <mapNode t='190' idref='1'/>
-    <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='Employer'>
+    <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='Employer'>
       <mapNode t='190' idref='1'/>
-      <child t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='PEXBusinessName'>
+      <child t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='PEXBusinessName'>
         <mapNode t='190' idref='1'/>
       </child>
       <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='PEXLegalName'>
@@ -420,10 +420,10 @@
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='142' V200='8' structElemExists='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Enrollment-2020-07-20'>
+  <outputMapElem t='200' id='142' V200='8' structElemExists='true' usedCount='10' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Enrollment-2020-07-20'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/localhost-2020-07-20-2,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='143' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='objRequest'>
+    <child t='200' id='143' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='objRequest'>
       <mapNode t='190' idref='1'/>
       <child t='200' id='144' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='API Request Type' V281='13' V1='4' name='API_Request_Type'>
         <mapNode t='190' idref='1'/>
@@ -515,16 +515,19 @@
           <mapNode t='190' idref='1'/>
         </child>
       </child>
-      <child t='200' id='174' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Group Information' V281='13' V1='4' name='Group_Information'>
+      <child t='200' id='174' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Group Information' V281='13' modifiedFromParent_emit='true' modifiedFromParent_null='true' V1='4' name='Group_Information'>
         <mapNode t='190' idref='1'/>
+        <emit>IsPresent(in$/localhost-2020-07-20-2/Employer)</emit>
+        <null>IsNull(in$/localhost-2020-07-20-2/Employer)</null>
         <child t='200' id='175' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Group COBRA Service' V281='13' V1='4' name='Group_COBRA_Service'>
           <mapNode t='190' idref='1'/>
         </child>
         <child t='200' id='176' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Group COBRA Type' V281='13' V1='4' name='Group_COBRA_Type'>
           <mapNode t='190' idref='1'/>
         </child>
-        <child t='200' id='177' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Group Company Name' V281='13' V1='4' name='Group_Company_Name'>
+        <child t='200' id='177' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Group Company Name' V281='13' modifiedFromParent_value='true' V1='4' name='Group_Company_Name'>
           <mapNode t='190' idref='1'/>
+          <value>in$/localhost-2020-07-20-2/Employer/PEXBusinessName</value>
         </child>
         <child t='200' id='178' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Group DBA Name' V281='13' V1='4' name='Group_DBA_Name'>
           <mapNode t='190' idref='1'/>
