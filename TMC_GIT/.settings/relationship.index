@@ -171,10 +171,6 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_-SBhkMriEeq4qM2oVnFmqQ",
-    "version" : "Latest",
-    "type" : "mapper"
-  }, {
     "id" : "DQTechnical",
     "version" : "Latest",
     "type" : "routine"
