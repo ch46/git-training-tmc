@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='150' id='1' V150='13' creationTimestamp='0x17372b7446c' V1='4' name='PEX20200720' incarnation='5'>
+<root t='150' id='1' V150='13' creationTimestamp='0x17372b7446c' V1='4' name='PEX20200720' incarnation='9'>
   <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PEX20200720'>
     <structNode t='150' idref='1'/>
     <child t='167' id='3' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='Employer' checksumValid='true' checksum='oGmqEl0KAMYIP78X4miMGfJvimk='>
@@ -624,5 +624,8 @@
     <child t='177' idref='208'/>
   </child>
   <child t='165' id='210' V1='4' name='Document Bindings'>
+    <child t='166' id='211' V166='5' docType='1' docReposPath='/TMC_GIT/Sample Data/PEX20200720/PEX20200720.json' V1='4' name='/PEX20200720'>
+      <elemNode t='167' idref='2'/>
+    </child>
   </child>
 </root>
