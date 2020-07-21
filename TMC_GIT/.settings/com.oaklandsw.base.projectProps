@@ -3,7 +3,8 @@ Databases,com.oaklandsw.base,order,5
 Maps,com.oaklandsw.base,order,1
 Maps/Jobs/PEX_20200622/tHMap_1.xml,com.oaklandsw.base,references.0,Structures/CalChoice_Enrollment_JSON.xml
 Maps/Jobs/PEX_20200622/tHMap_1.xml,com.oaklandsw.base,references.1,Structures/PEX_Sample3-20200507.xml
-Maps/Jobs/PEX_CalChoice/tHMap_1.xml,com.oaklandsw.base,references.0,Structures/CalChoice-Enrollment-2020-07-20.xml
+Maps/Jobs/PEX_CalChoice/tHMap_1.xml,com.oaklandsw.base,references.0,/PEX_20200423/Structures/PEX20200720.xml
+Maps/Jobs/PEX_CalChoice/tHMap_1.xml,com.oaklandsw.base,references.1,Structures/CalChoice-Enrollment-2020-07-20.xml
 Maps/Jobs/pex/tHMap_1.xml,com.oaklandsw.base,references.0,Structures/cc-template-20200310_-_no_data.xml
 Maps/Jobs/pex/tHMap_1.xml,com.oaklandsw.base,references.1,Structures/PEX_Sample3_-_20200310.xml
 Maps/Jobs/pex/tHMap_2.xml,com.oaklandsw.base,references.0,Structures/PEX_Sample3-20200507.xml
@@ -13,7 +14,6 @@ Reports,com.oaklandsw.base,order,7
 Sample Data,com.oaklandsw.base,order,6
 Structures,com.oaklandsw.base,order,0
 Structures/CalChoice_Enrollment_JSON.xml,com.oaklandsw.transform,repNodeType,177
-Structures/PEX20200720.xml,com.oaklandsw.transform,repNodeType,177
 Structures/multi_sale_order_json_input.xml,com.oaklandsw.base,references.0,Structures/sale_order_json.xml,/Root/row
 Structures/multi_sale_order_json_input.xml,com.oaklandsw.base,references.1,Sample Data/sale_order_json/sale_order_collection
 Structures/multi_sale_order_json_output.xml,com.oaklandsw.base,references.0,Sample Data/multi_sale_order_json_output/testout.json
