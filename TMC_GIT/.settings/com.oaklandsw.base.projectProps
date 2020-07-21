@@ -8,7 +8,7 @@ Maps/Jobs/PEX_CalChoice/tHMap_1.xml,com.oaklandsw.base,references.1,Structures/C
 Maps/Jobs/PEX_CalChoice/tHMap_2.xml,com.oaklandsw.base,references.0,Structures/localhost-2020-07-20-2.xml
 Maps/Jobs/PEX_CalChoice/tHMap_2.xml,com.oaklandsw.base,references.1,Structures/CalChoice-Enrollment-2020-07-20.xml
 Maps/Jobs/PassingParameters/tHMap_1.xml,com.oaklandsw.base,references.0,Structures/CalChoice-Enrollment-2020-07-20.xml
-Maps/Jobs/PassingParameters/tHMap_1.xml,com.oaklandsw.base,references.1,Structures/Jobs/PassingParameters/tHMap_1/row1.xml
+Maps/Jobs/PassingParameters/tHMap_1.xml,com.oaklandsw.base,references.1,Structures/localhost-2020-07-20-2.xml
 Maps/Jobs/pex/tHMap_1.xml,com.oaklandsw.base,references.0,Structures/cc-template-20200310_-_no_data.xml
 Maps/Jobs/pex/tHMap_1.xml,com.oaklandsw.base,references.1,Structures/PEX_Sample3_-_20200310.xml
 Maps/Jobs/pex/tHMap_2.xml,com.oaklandsw.base,references.0,Structures/PEX_Sample3-20200507.xml
