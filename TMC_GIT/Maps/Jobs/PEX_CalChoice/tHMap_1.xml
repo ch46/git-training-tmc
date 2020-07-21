@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/PEX20200720.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' inputRep='177' outputRep='177' nextMap='' inputStructUserName='PEX20200720' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_1' incarnation='2901'>
+<root t='190' id='1' V190='11' inStruct='Structures/PEX20200720.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' inputRep='177' outputRep='177' nextMap='' inputStructUserName='PEX20200720' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_1' incarnation='2919'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PEX20200720'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='Employer'>
@@ -618,16 +618,17 @@
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='208' V200='8' structElemExists='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Enrollment-2020-07-20'>
+  <outputMapElem t='200' id='208' V200='8' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Enrollment-2020-07-20'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/PEX20200720,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='209' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='objRequest'>
+    <child t='200' id='209' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='objRequest'>
       <mapNode t='190' idref='1'/>
       <child t='200' id='210' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='API Request Type' V281='13' V1='4' name='API_Request_Type'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='211' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='API Version' V281='13' V1='4' name='API_Version'>
+      <child t='200' id='211' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='API Version' V281='13' modifiedFromParent_value='true' V1='4' name='API_Version'>
         <mapNode t='190' idref='1'/>
+        <value>Constant([value="2",dataType="2"],)</value>
       </child>
       <child t='200' id='212' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Vendor Transaction ID' V281='13' V1='4' name='Vendor_Transaction_ID'>
         <mapNode t='190' idref='1'/>
@@ -1437,8 +1438,8 @@
   <outputRepRuntime t='697' id='480' V697='1' V690='1' padOutput='true'>
   </outputRepRuntime>
   <valueSets></valueSets>
-  <child t='165' id='479' V1='4' name='Document Bindings'>
-    <child t='166' id='480' V166='5' docType='1' V1='4' name='in$/PEX20200720'>
+  <child t='165' id='483' V1='4' name='Document Bindings'>
+    <child t='166' id='484' V166='5' docType='1' docReposPath='/TMC_GIT/Structures/PEX20200720.xml' V1='4' name='in$/PEX20200720'>
       <elemNode t='200' idref='2'/>
     </child>
     <child t='166' id='481' V166='5' docType='2' V1='4' name='out$/Enrollment-2020-07-20'>
