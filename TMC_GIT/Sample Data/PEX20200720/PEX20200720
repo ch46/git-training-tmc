@@ -18,7 +18,7 @@
         "Company Address (Physical)": [
             {
                 "CompanyAddress": "32100 Agoura Rd",
-                "CompanyAddress2": "",
+                "CompanyAddress2": "---",
                 "CompanyCity": "Westlake Village",
                 "CompanyState": "CA",
                 "CompanyAddressIsResidence": "No"
