@@ -19,6 +19,7 @@ Sample Data,com.oaklandsw.base,order,6
 Sample Data/Maps/Jobs/PEX_CalChoice/tHMap_1_input/PEX20200720.json,com.oaklandsw.transform,repNodeType,177
 Sample Data/PEX20200720/PEX20200720.json,com.oaklandsw.transform,repNodeType,177
 Structures,com.oaklandsw.base,order,0
+Structures/CalChoice-Enrollment-2020-07-20.xml,com.oaklandsw.transform,repNodeType,177
 Structures/CalChoice_Enrollment_JSON.xml,com.oaklandsw.transform,repNodeType,177
 Structures/Jobs/PEX_CalChoice/tHMap_2/InputWrapper.xml,com.oaklandsw.base,references.0,Structures/Jobs/PEX_CalChoice/tHMap_2/row5.xml,/root/row5
 Structures/Jobs/PEX_CalChoice/tHMap_2/InputWrapper.xml,com.oaklandsw.base,references.1,Structures/Jobs/PEX_CalChoice/tHMap_2/row4.xml,/root/row4
