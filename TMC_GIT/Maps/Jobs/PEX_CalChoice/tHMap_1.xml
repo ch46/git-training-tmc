@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/PEX20200720.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' inputRep='177' outputRep='177' nextMap='' inputStructUserName='PEX20200720' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_1' incarnation='7450'>
+<root t='190' id='1' V190='11' inStruct='Structures/PEX20200720.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' inputRep='177' outputRep='177' nextMap='' inputStructUserName='PEX20200720' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_1' incarnation='7452'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='674' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PEX20200720'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='300' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='Employer'>
@@ -1503,7 +1503,7 @@
   </outputRepRuntime>
   <valueSets></valueSets>
   <child t='165' id='481' V1='4' name='Document Bindings'>
-    <child t='166' id='482' V166='5' docType='1' docReposPath='/TMC_GIT/Sample Data/Maps/Jobs/PEX_CalChoice/tHMap_1_input/PEX20200720.json' V1='4' name='in$/PEX20200720'>
+    <child t='166' id='482' V166='5' docType='1' docReposPath='/TMC_GIT/Sample Data/PEX20200720/PEX20200720' V1='4' name='in$/PEX20200720'>
       <elemNode t='200' idref='2'/>
     </child>
     <child t='166' id='483' V166='5' docType='2' V1='4' name='out$/Enrollment-2020-07-20'>

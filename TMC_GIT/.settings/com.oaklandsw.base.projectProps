@@ -17,7 +17,6 @@ Namespace Containers,com.oaklandsw.base,order,4
 Reports,com.oaklandsw.base,order,7
 Sample Data,com.oaklandsw.base,order,6
 Sample Data/AgencyBrokers/AgencyBrokers.json,com.oaklandsw.transform,repNodeType,177
-Sample Data/Maps/Jobs/PEX_CalChoice/tHMap_1_input/PEX20200720.json,com.oaklandsw.transform,repNodeType,177
 Sample Data/PEX20200720/PEX20200720.json,com.oaklandsw.transform,repNodeType,177
 Structures,com.oaklandsw.base,order,0
 Structures/AgencyBrokers.xml,com.oaklandsw.base,references.0,Sample Data/AgencyBrokers/AgencyBrokers.json
