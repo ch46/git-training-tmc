@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/PEX20200720.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' inputRep='177' outputRep='177' nextMap='' inputStructUserName='PEX20200720' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_1' incarnation='6595'>
+<root t='190' id='1' V190='11' inStruct='Structures/PEX20200720.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' inputRep='177' outputRep='177' nextMap='' inputStructUserName='PEX20200720' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_1' incarnation='6622'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='475' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PEX20200720'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='209' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='Employer'>
@@ -618,10 +618,10 @@
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='208' V200='8' structElemExists='true' usedCount='603' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Enrollment-2020-07-20'>
+  <outputMapElem t='200' id='208' V200='8' structElemExists='true' usedCount='609' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Enrollment-2020-07-20'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/PEX20200720,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='209' V200='8' structElemExists='true' usedCount='591' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' modifiedFromParent_emit='true' modifiedFromParent_null='true' V1='4' name='objRequest'>
+    <child t='200' id='209' V200='8' structElemExists='true' usedCount='597' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' modifiedFromParent_emit='true' modifiedFromParent_null='true' V1='4' name='objRequest'>
       <mapNode t='190' idref='1'/>
       <child t='200' id='210' V200='8' structElemExists='true' usedCount='12' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='API Request Type' V281='13' modifiedFromParent_value='true' V1='4' name='API_Request_Type'>
         <mapNode t='190' idref='1'/>
@@ -669,8 +669,9 @@
           <value>Constant([value="5B733C80-3F8C-2CB9-6DB7-375B1A003F8C",dataType="2"],)</value>
         </child>
       </child>
-      <child t='200' id='222' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' externalName='Broker Information' V281='13' V1='4' name='Broker_Information'>
+      <child t='200' id='222' V200='8' structElemExists='true' usedCount='11' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' externalName='Broker Information' V281='13' modifiedFromParent_loop='true' V1='4' name='Broker_Information'>
         <mapNode t='190' idref='1'/>
+        <loop>FixedLoop([count="1"],{Number of Times})</loop>
         <child t='200' id='223' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='CC Broker ID' V281='13' V1='4' name='CC_Broker_ID'>
           <mapNode t='190' idref='1'/>
         </child>
@@ -703,14 +704,16 @@
         <child t='200' id='232' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Phone' V281='13' V1='4' name='Broker_Phone'>
           <mapNode t='190' idref='1'/>
         </child>
-        <child t='200' id='233' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker License Number' V281='13' V1='4' name='Broker_License_Number'>
+        <child t='200' id='233' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker License Number' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_License_Number'>
           <mapNode t='190' idref='1'/>
+          <value>Constant([value="1111111",dataType="2"],)</value>
         </child>
         <child t='200' id='234' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Tax ID or SSN' V281='13' V1='4' name='Broker_Tax_ID_or_SSN'>
           <mapNode t='190' idref='1'/>
         </child>
-        <child t='200' id='235' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker License Expiration Date' V281='13' V1='4' name='Broker_License_Expiration_Date'>
+        <child t='200' id='235' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker License Expiration Date' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_License_Expiration_Date'>
           <mapNode t='190' idref='1'/>
+          <value>Constant([value="12/31/2018",dataType="2"],)</value>
         </child>
         <child t='200' id='236' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Commissions Payable to Agency' V281='13' V1='4' name='Broker_Commissions_Payable_to_Agency'>
           <mapNode t='190' idref='1'/>
