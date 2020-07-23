@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/Jobs/PEX_CalChoice/tHMap_2/InputWrapper.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' outputRep='177' nextMap='' inputStructUserName='InputWrapper' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_2' incarnation='4458'>
-  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='269' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
+<root t='190' id='1' V190='11' inStruct='Structures/Jobs/PEX_CalChoice/tHMap_2/InputWrapper.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' outputRep='177' nextMap='' inputStructUserName='InputWrapper' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_2' incarnation='4554'>
+  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='282' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='261' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/PEX_CalChoice/tHMap_2/row4.xml' V281='13' V1='4' name='row4'>
       <mapNode t='190' idref='1'/>
@@ -770,32 +770,89 @@
         </child>
       </child>
     </child>
-    <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/PEX_CalChoice/tHMap_2/row5.xml' V281='13' V1='4' name='row5'>
+    <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='18' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/PEX_CalChoice/tHMap_2/row5.xml' V281='13' V1='4' name='row5'>
       <mapNode t='190' idref='1'/>
-      <child t='200' id='6' V200='8' input='true' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/AgencyBrokers.xml' V281='13' modifiedFromParent_io='true' V1='4' name='AgencyBrokers'>
+      <child t='200' id='6' V200='8' input='true' structElemExists='true' usedCount='18' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/AgencyBrokers.xml' V281='13' modifiedFromParent_io='true' V1='4' name='AgencyBrokers'>
         <mapNode t='190' idref='1'/>
         <repRuntime t='697' id='7' V697='1' V690='1' padOutput='true'>
         </repRuntime>
         <io>ReadURL([repName="JSON"],{Start Offset},{Length})</io>
-        <child t='200' id='537' V200='8' input='true' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='objResponse'>
+        <child t='200' id='537' V200='8' input='true' structElemExists='true' usedCount='15' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='objResponse'>
           <mapNode t='190' idref='1'/>
           <child t='200' id='538' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='Status'>
             <mapNode t='190' idref='1'/>
           </child>
-          <child t='200' id='539' V200='8' input='true' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Results'>
+          <child t='200' id='539' V200='8' input='true' structElemExists='true' usedCount='15' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Results'>
             <mapNode t='190' idref='1'/>
-            <child t='200' id='540' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Brokers'>
+            <child t='200' id='540' V200='8' input='true' structElemExists='true' usedCount='14' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Brokers'>
               <mapNode t='190' idref='1'/>
+              <child t='200' id='541' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='zip'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='542' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='home_phone'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='543' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='agency_name'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='544' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='city'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='545' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='broker_id'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='546' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='address1'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='547' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='agency_id'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='548' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='last_name'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='549' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='current_yn'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='550' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='tax_id'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='551' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='license_no'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='552' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='office_phone'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='553' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='broker_type_code'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='554' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='state'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='555' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='fax'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='556' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='first_name'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='557' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='vendor_no'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='558' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='license_expiration_date'>
+                <mapNode t='190' idref='1'/>
+              </child>
+              <child t='200' id='559' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='email'>
+                <mapNode t='190' idref='1'/>
+              </child>
             </child>
           </child>
         </child>
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='8' V200='8' structElemExists='true' usedCount='524' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Enrollment-2020-07-20'>
+  <outputMapElem t='200' id='8' V200='8' structElemExists='true' usedCount='546' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Enrollment-2020-07-20'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/root,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='9' V200='8' structElemExists='true' usedCount='521' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' modifiedFromParent_emit='true' modifiedFromParent_null='true' V1='4' name='objRequest'>
+    <child t='200' id='9' V200='8' structElemExists='true' usedCount='543' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' modifiedFromParent_emit='true' modifiedFromParent_null='true' V1='4' name='objRequest'>
       <mapNode t='190' idref='1'/>
       <emit>IsPresent(in$/root/row4/Enrollment-2020-07-20/objRequest)</emit>
       <null>IsNull(in$/root/row4/Enrollment-2020-07-20/objRequest)</null>
@@ -848,47 +905,58 @@
           <value>in$/root/row4/Enrollment-2020-07-20/objRequest/Agency_Information/Access_Key</value>
         </child>
       </child>
-      <child t='200' id='22' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' externalName='Broker Information' V281='13' modifiedFromParent_loop='true' V1='4' name='Broker_Information'>
+      <child t='200' id='22' V200='8' structElemExists='true' usedCount='27' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' externalName='Broker Information' V281='13' modifiedFromParent_loop='true' V1='4' name='Broker_Information'>
         <mapNode t='190' idref='1'/>
-        <loop>SimpleLoop(in$/root/row5/AgencyBrokers/objResponse/Results,{Filter},{Sort Keys},NestedContext(SimpleLoop(in$/root/row5/AgencyBrokers/objResponse/Results/Brokers,{Filter},{Sort Keys},{Contexts})))</loop>
-        <child t='200' id='23' V200='8' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='CC Broker ID' V281='13' modifiedFromParent_value='true' V1='4' name='CC_Broker_ID'>
+        <loop>SimpleLoop(in$/root/row5/AgencyBrokers/objResponse/Results,Equal(UpperCase(in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/current_yn),Constant([value="Y",dataType="2"],)),{Sort Keys},NestedContext(SimpleLoop(in$/root/row5/AgencyBrokers/objResponse/Results/Brokers,{Filter},{Sort Keys},{Contexts})))</loop>
+        <child t='200' id='23' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='CC Broker ID' V281='13' modifiedFromParent_value='true' V1='4' name='CC_Broker_ID'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/broker_id</value>
         </child>
-        <child t='200' id='24' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker First Name' V281='13' V1='4' name='Broker_First_Name'>
+        <child t='200' id='24' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker First Name' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_First_Name'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/first_name</value>
         </child>
         <child t='200' id='25' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker MI' V281='13' V1='4' name='Broker_MI'>
           <mapNode t='190' idref='1'/>
         </child>
-        <child t='200' id='26' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Last Name' V281='13' V1='4' name='Broker_Last_Name'>
+        <child t='200' id='26' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Last Name' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_Last_Name'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/last_name</value>
         </child>
-        <child t='200' id='27' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Address' V281='13' V1='4' name='Broker_Address'>
+        <child t='200' id='27' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Address' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_Address'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/address1</value>
         </child>
-        <child t='200' id='28' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker City' V281='13' V1='4' name='Broker_City'>
+        <child t='200' id='28' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker City' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_City'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/city</value>
         </child>
-        <child t='200' id='29' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker State' V281='13' V1='4' name='Broker_State'>
+        <child t='200' id='29' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker State' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_State'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/state</value>
         </child>
-        <child t='200' id='30' V200='8' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Zip Code' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_Zip_Code'>
+        <child t='200' id='30' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Zip Code' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_Zip_Code'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/zip</value>
         </child>
         <child t='200' id='31' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker County' V281='13' V1='4' name='Broker_County'>
           <mapNode t='190' idref='1'/>
         </child>
-        <child t='200' id='32' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Phone' V281='13' V1='4' name='Broker_Phone'>
+        <child t='200' id='32' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Phone' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_Phone'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/home_phone</value>
         </child>
-        <child t='200' id='33' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker License Number' V281='13' V1='4' name='Broker_License_Number'>
+        <child t='200' id='33' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker License Number' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_License_Number'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/license_no</value>
         </child>
-        <child t='200' id='34' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Tax ID or SSN' V281='13' V1='4' name='Broker_Tax_ID_or_SSN'>
+        <child t='200' id='34' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Tax ID or SSN' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_Tax_ID_or_SSN'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/tax_id</value>
         </child>
-        <child t='200' id='35' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker License Expiration Date' V281='13' V1='4' name='Broker_License_Expiration_Date'>
+        <child t='200' id='35' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker License Expiration Date' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_License_Expiration_Date'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/license_expiration_date</value>
         </child>
         <child t='200' id='36' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Commissions Payable to Agency' V281='13' V1='4' name='Broker_Commissions_Payable_to_Agency'>
           <mapNode t='190' idref='1'/>
@@ -896,8 +964,9 @@
         <child t='200' id='37' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Primary or Co-Broker' V281='13' V1='4' name='Broker_Primary_or_Co-Broker'>
           <mapNode t='190' idref='1'/>
         </child>
-        <child t='200' id='38' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Email' V281='13' V1='4' name='Broker_Email'>
+        <child t='200' id='38' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Email' V281='13' modifiedFromParent_value='true' V1='4' name='Broker_Email'>
           <mapNode t='190' idref='1'/>
+          <value>in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/email</value>
         </child>
         <child t='200' id='39' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='Broker Commission Split Percentage' V281='13' V1='4' name='Broker_Commission_Split_Percentage'>
           <mapNode t='190' idref='1'/>
