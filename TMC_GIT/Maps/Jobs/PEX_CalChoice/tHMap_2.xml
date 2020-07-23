@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/Jobs/PEX_CalChoice/tHMap_2/InputWrapper.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' outputRep='177' nextMap='' inputStructUserName='InputWrapper' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_2' incarnation='5554'>
+<root t='190' id='1' V190='11' inStruct='Structures/Jobs/PEX_CalChoice/tHMap_2/InputWrapper.xml' outStruct='Structures/CalChoice-Enrollment-2020-07-20.xml' outputRep='177' nextMap='' inputStructUserName='InputWrapper' outputStructUserName='CalChoice-Enrollment-2020-07-20' V1='4' name='tHMap_2' incarnation='5560'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='837' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='779' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/PEX_CalChoice/tHMap_2/row4.xml' V281='13' V1='4' name='row4'>
@@ -907,7 +907,7 @@
       </child>
       <child t='200' id='22' V200='8' structElemExists='true' usedCount='58' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' externalName='Broker Information' V281='13' modifiedFromParent_loop='true' modifiedFromParent_validate='true' modifiedFromParent_util='true' V1='4' name='Broker_Information'>
         <mapNode t='190' idref='1'/>
-        <loop>SimpleLoop(in$/root/row5/AgencyBrokers/objResponse/Results,{Filter},{Sort Keys},NestedContext(SimpleLoop(in$/root/row5/AgencyBrokers/objResponse/Results/Brokers,Equal(in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/license_no,GetMapProperty([property="\"context.licensenumber\""],)),{Sort Keys},{Contexts})))</loop>
+        <loop>SimpleLoop(in$/root/row5/AgencyBrokers/objResponse/Results,{Filter},{Sort Keys},NestedContext(SimpleLoop(in$/root/row5/AgencyBrokers/objResponse/Results/Brokers,Equal(in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/license_no,GetMapProperty([property="licensenumber"],)),{Sort Keys},{Contexts})))</loop>
         <validate>Equal(UpperCase(in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/current_yn),Constant([value="Y",dataType="2"],))</validate>
         <util>GreaterOrEqual(ParseDateTime([pattern="MM/DD/YYYY"],in$/root/row5/AgencyBrokers/objResponse/Results/Brokers/license_expiration_date),GetCurrentDateTime())</util>
         <child t='200' id='23' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' externalName='CC Broker ID' V281='13' modifiedFromParent_value='true' V1='4' name='CC_Broker_ID'>
