@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="">
+	<FileInformation>
+		<MessageID>	9f096abb-13ec-4936-be5d-61227601550e	</MessageID>
+		<FileName>	999999999_warnerpacific_ccsb_file_20190312154050.xml	</FileName>
+		<EnrollmentAction>	Open Enrollment	</EnrollmentAction>
+		<SenderID>	warnerpacific	</SenderID>
+		<ReceiverID>	Covered California	</ReceiverID>
+		<FileAttachments>
+			<FileAttachment>	999999999_warnerpacific_ccsb_file_filename_20190312154051.pdf	</FileAttachment>
+			<FileAttachment>	999999999_warnerpacific_ccsb_file_filename_Docs_20190312154051.pdf	</FileAttachment>
+			<FileAttachment>	999999999_warnerpacific_ccsb_file_filename_Note_20190312154051.pdf	</FileAttachment>
+			<FileAttachment>	999999999_warnerpacific_ccsb_file_filename_EE_Apps_20190312154051.pdf	</FileAttachment>
+		</FileAttachments>
+	</FileInformation>
+	<Employer>
+		<ApplicationReceivedDate>	2019-03-12	</ApplicationReceivedDate>
+		<BusinessName>	XYZ Company	</BusinessName>
+		<DBA>	XYZ Company DBA Name	</DBA>
+		<OrganizationType>	Private	</OrganizationType>
+		<TotalEmployees>	3	</TotalEmployees>
+		<TotalEligibleEmployees>	3	</TotalEligibleEmployees>
+		<CoverageEffectiveDate>	2019-04-01	</CoverageEffectiveDate>
+		<OfferDependentCoverage>	Y	</OfferDependentCoverage>
+		<OfferNonRegisteredCoverage>	Y	</OfferNonRegisteredCoverage>
+		<ContactPersonName>
+			<LastName>	John	</LastName>
+			<FirstName>	Doe	</FirstName>
+		</ContactPersonName>
+		<ContactPhoneNumber>	1234567890	</ContactPhoneNumber>
+		<ContactEmail>	jdoe@email.com	</ContactEmail>
+		<ContactPreferredContactMode>	Email	</ContactPreferredContactMode>
+		<BusinessAddress>
+			<Addressline1>	123 Street Way	</Addressline1>
+			<Addressline2>	Suite B	</Addressline2>
+			<CityName>	Pacifica	</CityName>
+			<StateCode>	CA	</StateCode>
+			<PostalCode>	94044	</PostalCode>
+			<CountyName>	San Mateo	</CountyName>
+		</BusinessAddress>
+		<Plan>
+			<PlanLevel>	S	</PlanLevel>
+			<ReferenceHealthInsCarrier>	40513	</ReferenceHealthInsCarrier>
+			<ReferencePlanName>	40513CA0400004	</ReferencePlanName>
+		</Plan>
+		<Employees>
+			<Employee>
+				<employee_decliningcoverage>	N	</employee_decliningcoverage>
+				<employee_firstname>	Jim	</employee_firstname>
+				<employee_middlename>	P	</employee_middlename>
+				<employee_lastname>	Schmoe	</employee_lastname>
+				<employee_ssn>	123-45-6489	</employee_ssn>
+				<employee_dob>	1996-07-07	</employee_dob>
+				<employee_sex>	M	</employee_sex>
+				<employee_homeaddress1>	123 Street	</employee_homeaddress1>
+				<employee_homeaddress2>	#503	</employee_homeaddress2>
+				<employee_city>	San Francisco	</employee_city>
+				<employee_state>	CA	</employee_state>
+				<employee_zipcode>	94132	</employee_zipcode>
+				<employee_county>	San Francisco	</employee_county>
+				<employee_communication_method>	E	</employee_communication_method>
+				<employee_email>	jschmoe@email.com	</employee_email>
+				<employee_phone_type>	C	</employee_phone_type>
+				<employee_phone>	(777) 777-7777	</employee_phone>
+				<employee_marital>	S	</employee_marital>
+				<employee_healthplan>	40513CA0400004	</employee_healthplan>
+				<employee_dentalplan></employee_dentalplan>
+				<employee_declining_coverage_for></employee_declining_coverage_for>
+				<employee_reasondeclining></employee_reasondeclining>
+				<Dependents>
+					<Dependent>
+						<dependent_decliningcoverage>	N	</dependent_decliningcoverage>
+						<dependent_type>	Spouse	</dependent_type>
+						<dependent_firstname>	Mary	</dependent_firstname>
+						<dependent_middleinitial></dependent_middleinitial>
+						<dependent_lastname>	Schmoe	</dependent_lastname>
+						<dependent_ssn>	123-45-6789	</dependent_ssn>
+						<dependent_dob>	1981-11-03	</dependent_dob>
+						<dependent_sex>	F	</dependent_sex>
+						<dependent_homeaddress1>	111 Street	</dependent_homeaddress1>
+						<dependent_homeaddress2></dependent_homeaddress2>
+						<dependent_city>	San Francisco	</dependent_city>
+						<dependent_state>	CA	</dependent_state>
+						<dependent_zipcode>	94044	</dependent_zipcode>
+					</Dependent>					
+					<Dependent>
+						<dependent_decliningcoverage>	N	</dependent_decliningcoverage>
+						<dependent_type>	Child	</dependent_type>
+						<dependent_firstname>	Joe	</dependent_firstname>
+						<dependent_middleinitial></dependent_middleinitial>
+						<dependent_lastname>	Schmoe	</dependent_lastname>
+						<dependent_ssn>	123-45-6789	</dependent_ssn>
+						<dependent_dob>	1981-11-03	</dependent_dob>
+						<dependent_sex>	F	</dependent_sex>
+						<dependent_homeaddress1>	111 Street	</dependent_homeaddress1>
+						<dependent_homeaddress2></dependent_homeaddress2>
+						<dependent_city>	San Francisco	</dependent_city>
+						<dependent_state>	CA	</dependent_state>
+						<dependent_zipcode>	94044	</dependent_zipcode>
+					</Dependent>
+				</Dependents>
+			</Employee>			
+			<Employee>
+				<employee_decliningcoverage>	N	</employee_decliningcoverage>
+				<employee_firstname>	Jim	</employee_firstname>
+				<employee_middlename>	P	</employee_middlename>
+				<employee_lastname>	Schmoe	</employee_lastname>
+				<employee_ssn>	123-45-6489	</employee_ssn>
+				<employee_dob>	1996-07-07	</employee_dob>
+				<employee_sex>	M	</employee_sex>
+				<employee_homeaddress1>	123 Street	</employee_homeaddress1>
+				<employee_homeaddress2>	#503	</employee_homeaddress2>
+				<employee_city>	San Francisco	</employee_city>
+				<employee_state>	CA	</employee_state>
+				<employee_zipcode>	94132	</employee_zipcode>
+				<employee_county>	San Francisco	</employee_county>
+				<employee_communication_method>	E	</employee_communication_method>
+				<employee_email>	jschmoe@email.com	</employee_email>
+				<employee_phone_type>	C	</employee_phone_type>
+				<employee_phone>	(777) 777-7777	</employee_phone>
+				<employee_marital>	S	</employee_marital>
+				<employee_healthplan>	40513CA0400004	</employee_healthplan>
+				<employee_dentalplan></employee_dentalplan>
+				<employee_declining_coverage_for></employee_declining_coverage_for>
+				<employee_reasondeclining></employee_reasondeclining>
+				<Dependents>
+					<Dependent>
+						<dependent_decliningcoverage>	N	</dependent_decliningcoverage>
+						<dependent_type>	Spouse	</dependent_type>
+						<dependent_firstname>	Mary	</dependent_firstname>
+						<dependent_middleinitial></dependent_middleinitial>
+						<dependent_lastname>	Schmoe	</dependent_lastname>
+						<dependent_ssn>	123-45-6789	</dependent_ssn>
+						<dependent_dob>	1981-11-03	</dependent_dob>
+						<dependent_sex>	F	</dependent_sex>
+						<dependent_homeaddress1>	111 Street	</dependent_homeaddress1>
+						<dependent_homeaddress2></dependent_homeaddress2>
+						<dependent_city>	San Francisco	</dependent_city>
+						<dependent_state>	CA	</dependent_state>
+						<dependent_zipcode>	94044	</dependent_zipcode>
+					</Dependent>					
+					<Dependent>
+						<dependent_decliningcoverage>	N	</dependent_decliningcoverage>
+						<dependent_type>	Child	</dependent_type>
+						<dependent_firstname>	Joe	</dependent_firstname>
+						<dependent_middleinitial></dependent_middleinitial>
+						<dependent_lastname>	Schmoe	</dependent_lastname>
+						<dependent_ssn>	123-45-6789	</dependent_ssn>
+						<dependent_dob>	1981-11-03	</dependent_dob>
+						<dependent_sex>	F	</dependent_sex>
+						<dependent_homeaddress1>	111 Street	</dependent_homeaddress1>
+						<dependent_homeaddress2></dependent_homeaddress2>
+						<dependent_city>	San Francisco	</dependent_city>
+						<dependent_state>	CA	</dependent_state>
+						<dependent_zipcode>	94044	</dependent_zipcode>
+					</Dependent>
+				</Dependents>
+			</Employee>
+			<Employee>
+				<employee_decliningcoverage>	N	</employee_decliningcoverage>
+				<employee_firstname>	Jim	</employee_firstname>
+				<employee_middlename>	P	</employee_middlename>
+				<employee_lastname>	Schmoe	</employee_lastname>
+				<employee_ssn>	123-45-6489	</employee_ssn>
+				<employee_dob>	1996-07-07	</employee_dob>
+				<employee_sex>	M	</employee_sex>
+				<employee_homeaddress1>	123 Street	</employee_homeaddress1>
+				<employee_homeaddress2>	#503	</employee_homeaddress2>
+				<employee_city>	San Francisco	</employee_city>
+				<employee_state>	CA	</employee_state>
+				<employee_zipcode>	94132	</employee_zipcode>
+				<employee_county>	San Francisco	</employee_county>
+				<employee_communication_method>	E	</employee_communication_method>
+				<employee_email>	jschmoe@email.com	</employee_email>
+				<employee_phone_type>	C	</employee_phone_type>
+				<employee_phone>	(777) 777-7777	</employee_phone>
+				<employee_marital>	S	</employee_marital>
+				<employee_healthplan>	40513CA0400004	</employee_healthplan>
+				<employee_dentalplan></employee_dentalplan>
+				<employee_declining_coverage_for></employee_declining_coverage_for>
+				<employee_reasondeclining></employee_reasondeclining>
+				<Dependents>
+					<Dependent>
+						<dependent_decliningcoverage>	N	</dependent_decliningcoverage>
+						<dependent_type>	Spouse	</dependent_type>
+						<dependent_firstname>	Mary	</dependent_firstname>
+						<dependent_middleinitial></dependent_middleinitial>
+						<dependent_lastname>	Schmoe	</dependent_lastname>
+						<dependent_ssn>	123-45-6789	</dependent_ssn>
+						<dependent_dob>	1981-11-03	</dependent_dob>
+						<dependent_sex>	F	</dependent_sex>
+						<dependent_homeaddress1>	111 Street	</dependent_homeaddress1>
+						<dependent_homeaddress2></dependent_homeaddress2>
+						<dependent_city>	San Francisco	</dependent_city>
+						<dependent_state>	CA	</dependent_state>
+						<dependent_zipcode>	94044	</dependent_zipcode>
+					</Dependent>					
+					<Dependent>
+						<dependent_decliningcoverage>	N	</dependent_decliningcoverage>
+						<dependent_type>	Child	</dependent_type>
+						<dependent_firstname>	Joe	</dependent_firstname>
+						<dependent_middleinitial></dependent_middleinitial>
+						<dependent_lastname>	Schmoe	</dependent_lastname>
+						<dependent_ssn>	123-45-6789	</dependent_ssn>
+						<dependent_dob>	1981-11-03	</dependent_dob>
+						<dependent_sex>	F	</dependent_sex>
+						<dependent_homeaddress1>	111 Street	</dependent_homeaddress1>
+						<dependent_homeaddress2></dependent_homeaddress2>
+						<dependent_city>	San Francisco	</dependent_city>
+						<dependent_state>	CA	</dependent_state>
+						<dependent_zipcode>	94044	</dependent_zipcode>
+					</Dependent>
+				</Dependents>
+			</Employee>
+		</Employees>
+	</Employer>
+</Group>						
